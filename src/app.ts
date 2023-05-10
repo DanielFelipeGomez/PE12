@@ -1,17 +1,13 @@
 import express from 'express';
 import './db/mongoose.js';
-import { userRouter } from './routers/userRouter.js'
-import { trackRouter } from './routers/trackRouter.js'
-import { groupRouter } from './routers/groupRouter.js'
-import { challengeRouter } from './routers/challengeRouter.js'
+import { studentRouter } from './routers/studentRouter.js'
+import { subjectRouter } from './routers/subjectRouter.js'
 import { defaultRouter } from './routers/defaultRouter.js';
 
 export const app = express();
 app.use(express.json());
-app.use(userRouter);
-app.use(trackRouter);
-app.use(groupRouter);
-app.use(challengeRouter);
+app.use(studentRouter);
+app.use(subjectRouter);
 app.use(defaultRouter);
 
 
